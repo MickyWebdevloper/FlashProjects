@@ -1,0 +1,15 @@
+{% macro render_field(field) %}
+{% from "_macros.html" import render_field %}
+<h4> {{ fiel.label }}</h4>
+{{ field(**kwargs)|safe }}
+<ul>
+    {% for error in field.errors %}
+    <li style="color: red;">
+        {% if error %}
+            {{ error}}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endmacro %}

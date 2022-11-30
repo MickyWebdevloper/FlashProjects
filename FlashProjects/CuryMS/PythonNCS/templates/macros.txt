@@ -1,0 +1,25 @@
+{% macro render_field(field) %}
+{% from "_macros.html" import render_field %}
+<h4> {{ field.label }}</h4>
+{{ field(**kwargs)|safe }}
+<ul>
+    {% for error in field.errors %}
+    <li style="color: red;">
+        {% if error %}
+            {{ error}}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endmacro %}
+
+<!-- {% from "_macros.html" import render_field %} -->
+<!-- with macro  -->
+        <!-- <h4>Registration Form</h4>
+        {{ form.csrf_token }}
+        {{ render_field(form.username ) }}
+        {{ render_field(form.email ) }}
+        {{ render_field(form.password )}}
+        {{ render_field(form.confirm_password )}}
+        <input type="submit" value="Sign Up"> -->

@@ -1,0 +1,9 @@
+
+----- Here i will include Json, for feeling like Wordpress, Change one place Reflect Anywherer -----
+1. Templates Inheritense is Done.
+2. Python Package is Done.
+3. {
+    wtform is done without Macro,
+    wtform IS DONE with Macro.
+    }
+4. 
